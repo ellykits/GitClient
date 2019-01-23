@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="80dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/githubProfileImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/kitoto"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"/>
+    <TextView
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:text="Elly Kitoto"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullName"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/githubProfileImageView"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="Captain of my ship; master of my fate. I am also addicted to new technology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bioTextview"
+            android:maxLines="3"
+            android:maxWidth="320dp"
+            android:textAlignment="center"
+            style="@style/customTextStyle"
+            android:textColor="@color/colorLightWhite"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/fullName"/>
+    <TextView
+            android:drawableLeft="@drawable/ic_people"
+            android:drawablePadding="4dp"
+            android:text="\@Onaio"
+            style="@style/customTextStyle"
+            android:textColor="@color/colorLightWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/companyTextView"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/bioTextview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="4dp"
+            style="@style/customTextStyle"
+            android:textColor="@color/colorLightWhite"
+            android:text="Nairobi, Kenya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationTextView"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyTextView"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:background="@color/colorPrimaryLight"
+                                                       android:layout_height="48dp"
+                                                       app:layout_constraintBottom_toBottomOf="parent"
+                                                       app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+                                                       android:layout_marginTop="16dp"
+                                                       app:layout_constraintStart_toStartOf="parent"
+                                                       app:layout_constraintEnd_toEndOf="parent"
+                                                       android:id="@+id/constraintLayout">
+
+        <TextView
+                style="@style/customTextStyle"
+                android:textColor="@color/colorAccent"
+                android:text="Followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followersLbl"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/followersTextView"/>
+        <TextView
+                style="@style/customTextStyle"
+                android:textColor="@color/colorLightWhite"
+                android:text="8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followingTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/followingLbl"
+                app:layout_constraintHorizontal_bias="0.5"/>
+        <TextView
+                android:text="20"
+                style="@style/customTextStyle"
+                android:textColor="@color/colorLightWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followersTextView"
+                app:layout_constraintBaseline_toBaselineOf="@+id/followersLbl"
+                app:layout_constraintStart_toEndOf="@+id/followersLbl"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/reposLabel"/>
+
+        <TextView
+                android:text="Following"
+                style="@style/customTextStyle"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followingLbl"
+                app:layout_constraintEnd_toStartOf="@+id/followingTextView"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/followingTextView"
+                app:layout_constraintStart_toEndOf="@+id/reposTextView" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.5"/>
+        <TextView
+                style="@style/customTextStyle"
+                android:textColor="@color/colorAccent"
+                android:text="Repos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reposLabel"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/followersTextView"
+                app:layout_constraintStart_toEndOf="@+id/followersTextView" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/reposTextView"/>
+        <TextView
+                android:text="20"
+                style="@style/customTextStyle"
+                android:textColor="@color/colorLightWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reposTextView"
+                app:layout_constraintStart_toEndOf="@+id/reposLabel"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/followingLbl"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

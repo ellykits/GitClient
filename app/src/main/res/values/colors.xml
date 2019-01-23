@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#344955</color>
+    <color name="colorPrimaryDark">#232F34</color>
+    <color name="colorPrimaryLight">#4A6572</color>
+    <color name="colorAccent">#F9AA33</color>
+
+    <!-- Application colors-->
+    <color name="separatorColor">#E5E3E9</color>
+    <color name="colorBlack">#2E2E2E</color>
+    <color name="colorGrey">#939598</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightWhite">#dfdfdf</color>
+</resources>

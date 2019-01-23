@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RxGithub</string>
+    <string name="remove_from_list">Remove from list</string>
+    <string name="who_to_follow">Who to follow</string>
+    <string name="username">\@%s</string>
+    <string name="error">An error occured please try again later!</string>
+</resources>
